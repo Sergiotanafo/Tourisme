@@ -1,0 +1,8 @@
+<resources>
+    <string name="parc_national_de_bamako">Parc National de Bamako</string>
+    <string name="description_parc">Description du parc...</string>
+    <string name="cat_gories">Catégories</string>
+    <string name="explorer">Explorer</string>
+    <string name="commentaires_des_utilisateurs">Commentaires des utilisateurs:</string>
+    <string name="attraction" />
+</resources>

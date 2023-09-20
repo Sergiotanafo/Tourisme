@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewAttraction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_image_view"
+                android:scaleType="centerCrop"
+                android:src="@drawable/parc1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/attraction" />
+
+            <TextView
+                android:id="@+id/textViewAttractionName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/parc_national_de_bamako"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewAttraction"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <TextView
+                android:id="@+id/textViewAttractionDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/description_parc"
+                app:layout_constraintTop_toBottomOf="@id/textViewAttractionName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <TextView
+                android:id="@+id/textViewCategoriesTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cat_gories"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/textViewAttractionDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewCategoriesTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_small" />
+
+            <RatingBar
+                android:id="@+id/ratingBarAttraction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="4.5"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewCategories"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <Button
+                android:id="@+id/buttonExplore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explorer"
+                app:layout_constraintTop_toBottomOf="@id/ratingBarAttraction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <TextView
+                android:id="@+id/textViewUserComments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/commentaires_des_utilisateurs"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/buttonExplore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_default" />
+
+            <ListView
+                android:id="@+id/listViewComments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewUserComments"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_margin="@dimen/margin_small" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
